@@ -1,0 +1,16 @@
+<!ELEMENT ad (year,make)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT make (#PCDATA)>
+<!ATTLIST make 
+	a CDATA "3"
+	b CDATA #IMPLIED
+	e CDATA #FIXED "4"
+	f  (4|5) "4" >
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ad SYSTEM "b.dtd">
+<ad>
+	<year> 1960 </year>
+	<make f = "6"> fd </make>
+
+</ad>

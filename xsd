@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad>
+	<year> 1960 </year>
+	<make f = "6"> fd </make>
+	<car>audi</car>
+
+</ad>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="ad">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="year" type="xsd:string"/>
+				<xsd:element name = "make" type="makeType"/>
+				<xsd:element name="car" minOccurs="1">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="10"/>
+							<xsd:enumeration value="audi"/>
+							<xsd:enumeration value="bmw"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="makeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="f" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+
+</xsd:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="css.css"?>
+
+<ad>
+	<year> 1960 </year>
+	<make> cessna </make>
+</ad>
+
+
+ad {display:block;}
+year {color:red;}
+make {color:blue;}
